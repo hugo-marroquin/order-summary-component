@@ -1,0 +1,153 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary-colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* neutral-colors */
+  --vpale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  /* fonts */
+  --main-font: "Red Hat Display", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--main-font);
+  color: var(--main-white);
+  background: url(/images/pattern-background-desktop.svg) no-repeat,
+    var(--pale-blue);
+  background-size: 100% 50%;
+  color: var(--desaturated-blue);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* re-usable classes */
+.flex {
+  display: flex;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+}
+
+/* card */
+.container {
+  max-width: 40rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 4rem;
+}
+
+.container .main-wrapper {
+  padding: 4rem;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.container .card-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+}
+
+.container .card-description {
+  text-align: center;
+}
+
+.container .plan-section {
+  align-items: center;
+  background: var(--vpale-blue);
+  padding: 2rem 0;
+  justify-content: space-around;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.container .music-icon {
+  max-width: 4rem;
+  margin-right: 1rem;
+}
+
+.container .plan-title {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.container .pricing {
+  align-items: center;
+  gap: 1rem;
+}
+
+.container .plan-action {
+  font-size: 1.4rem;
+  color: var(--bright-blue);
+}
+
+.container .plan-action:hover {
+  cursor: pointer;
+  color: #756af1;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.container .btn-payment {
+  background: var(--bright-blue);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1.25rem 0;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  box-shadow: 1px 10px 12px 0px rgba(56, 41, 224, 0.27);
+}
+
+.container .btn-payment:hover {
+  cursor: pointer;
+  background: #756af1;
+  transition: all 0.5s;
+}
+
+.container .btn-cancel {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+}
+
+.container .btn-cancel:hover {
+  cursor: pointer;
+  color: var(--dark-blue);
+  transition: all 0.5s;
+}
+
+/* attribution */
+.attribution {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 4rem 4rem 4rem;
+}
+.attribution a {
+  color: var(--desaturated-blue);
+}
